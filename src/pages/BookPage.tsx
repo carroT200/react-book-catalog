@@ -11,7 +11,7 @@ const BookPage = () => {
     return (
       <Container sx={{ mt: 4 }}>
         <Typography variant="h5" color="error" gutterBottom>
-          Book not found
+          Book not found: {id}
         </Typography>
         <Button component={Link} to="/" variant="contained">
           Back to the book list
