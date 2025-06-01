@@ -1,18 +1,21 @@
-import { useParams } from 'react-router-dom';
-import { books, Book } from '../data/books';
-import { Container, Typography } from '@mui/material';
+import { useParams, Link } from 'react-router-dom';
+import { Container, Typography, Button } from '@mui/material';
+import { books } from '../data/books';
 
 const BookPage = () => {
   const { id } = useParams<{ id: string }>();
 
-  const book: Book | undefined = books.find((b) => b.id === id);
+  const book = books.find((b) => b.id === id);
 
   if (!book) {
     return (
       <Container sx={{ mt: 4 }}>
-        <Typography variant="h5" color="error">
+        <Typography variant="h5" color="error" gutterBottom>
           Book not found
         </Typography>
+        <Button component={Link} to="/" variant="contained">
+          Back to the book list
+        </Button>
       </Container>
     );
   }
@@ -23,11 +26,9 @@ const BookPage = () => {
         {book.title}
       </Typography>
       <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-        Author: {book.author}
+        Автор: {book.author}
       </Typography>
-      <Typography variant="body1">
-        {book.description}
-      </Typography>
+      <Typography variant="body1">{book.description}</Typography>
     </Container>
   );
 };
