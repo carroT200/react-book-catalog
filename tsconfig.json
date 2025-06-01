@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ESNext",                                  /* Modern JS features */
+    "module": "ESNext",                                  /* Use ES modules */
+    "jsx": "react-jsx",                                  /* React 17+ JSX transform */
+    "moduleResolution": "node",                          /* Resolve Node-style modules */
+    "resolveJsonModule": true,                           /* Allow importing .json files */
+    "esModuleInterop": true,                             /* Allow default imports from CommonJS */
+    "allowSyntheticDefaultImports": true,                /* Allow synthetic default imports */
+
+    /* Project behavior */
+    "strict": true,                                      /* Enable all strict type checks */
+    "forceConsistentCasingInFileNames": true,            /* Avoid casing mismatches in imports */
+    "skipLibCheck": true,                                /* Skip type checks of .d.ts files */
+    "noEmit": true,                                      /* Do not generate output files */
+
+    /* Optional for better editor experience */
+    // "baseUrl": "./src",                               /* Uncomment if you want path aliases */
+    // "paths": {
+    //   "@components/*": ["components/*"]
+    // }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
